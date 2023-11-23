@@ -6,6 +6,8 @@ This Power Automate Flow is designed to automate tasks in SharePoint and Planner
 ## How to use?
 Copy the json payload and insert it via STRG+V into your flow. Adjust all missing connections and choose your SharePoint List and Planner
 
+<img src="[https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif](https://i.imgur.com/hJuY0kZ.gif)" width="100%" height="100%" />
+
 ## Flow Actions
 
 ### 1. Get Items from SharePoint
