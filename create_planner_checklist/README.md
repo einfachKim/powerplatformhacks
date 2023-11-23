@@ -3,6 +3,9 @@
 ## Overview
 This Power Automate Flow is designed to automate tasks in SharePoint and Planner. It retrieves items from a SharePoint list, processes each item, creates tasks in Planner based on the SharePoint items, and updates task details accordingly, adding subtasks to the specific tasks.
 
+## How to use?
+Copy the json payload and insert it via STRG+V into your flow. Adjust all missing connections and choose your SharePoint List and Planner
+
 ## Flow Actions
 
 ### 1. Get Items from SharePoint
