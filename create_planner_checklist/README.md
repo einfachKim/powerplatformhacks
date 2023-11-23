@@ -8,7 +8,6 @@ Copy the json payload and insert it via STRG+V into your flow. Adjust all missin
 
 <img src="https://i.imgur.com/hJuY0kZ.gif" width="200" height="200" />
 
-
 ## Flow Actions
 
 ### 1. Get Items from SharePoint
