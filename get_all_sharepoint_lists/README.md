@@ -5,8 +5,8 @@ Copy the json payload in the file "flow.json" for each Main Flow and Exception H
 
 ### Prequisitions:
 Create a manual trigger (e.g. Power Apps V2) and create an input of the type Text with the name "SharePointSite" in this trigger. In this you will later transfer the URl for the specific SharePoint site on which the lists are to be looked up.
+<img src="https://i.imgur.com/2gWdfVs.png"/>
 
-https://i.imgur.com/2gWdfVs.png
 
 ### Main Flow (`2f95a401-ecdb-45c0-8dae-cc5fef6fe10b`)
 - **Purpose**: Retrieves all visible SharePoint lists from a specified site.
