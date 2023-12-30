@@ -2,7 +2,7 @@
 
 ### How to use?
 Copy the json payload in the file "flow.json" for each Main Flow and Exception Handler and insert it via STRG+V into your flow. Adjust all missing connections.
-<img src="https://i.imgur.com/OAp9qCC.gif"/>
+<img src="https://i.imgur.com/M8WPxHo.gif"/>
 
 ### Important note
 Be sure that you configure the Exception Handler Scope to "run only" after the main scope has failed. Otherwise the exception handler will run all the time, which is not intended.
