@@ -1,0 +1,18 @@
+
+
+### Main Flow (ID: 068929a8-31d4-470f-96d8-27035c54c7c4)
+**Purpose:** Retrieves specific SharePoint view fields based on provided site and view field URI.
+
+**Actions:**
+1. **Send HTTP Request to SharePoint:** Fetches fields for a given SharePoint view, applying necessary filters or conditions.
+2. **Select:** Structures the fetched field data for further use or display.
+3. **Respond to PowerApp or Flow:** Returns the processed fields data and a success status to the initiating PowerApp or Flow.
+
+### Exception Handler (ID: 0266d335-2bdc-4c86-bbca-a99745d5801c)
+**Purpose:** Manages any errors occurring in the main flow, ensuring users and administrators are notified.
+
+**Actions:**
+1. **Send Email (V2):** Informs a designated receiver about the flow failure with detailed information.
+2. **Create HTML Table:** Summarizes error details for the notification email.
+3. **Terminate:** Ends the flow marking it as failed, preventing any further erroneous operations.
+4. **Respond to PowerApp or Flow:** Notifies the initiating app or flow about the error, ensuring transparency and prompt attention to the issue.
