@@ -19,7 +19,7 @@ Create a manual trigger (e.g. Power Apps V2) and create an input of the type Tex
 
 <img src="https://i.imgur.com/jrwO7NT.png"/>
 
-#### Main Flow (ID: 6220c582-319e-433e-8466-69ea536d8ed5)
+### Main Flow (ID: 6220c582-319e-433e-8466-69ea536d8ed5)
 
 **Purpose:** Retrieves and sends all views from a specified SharePoint list, focusing on visible and relevant view details.
 
@@ -28,7 +28,7 @@ Create a manual trigger (e.g. Power Apps V2) and create an input of the type Tex
 2. **Select:** Filters the retrieved views data to extract necessary details including ID, Title, DefaultView, and ViewFieldsUri.
 3. **Respond to PowerApp or Flow:** Sends the curated list of views and a success status back to the calling PowerApp or Flow.
 
-#### Exception Handler (ID: b8af0d7b-da37-4e2a-ab0e-3ee963c0004b)
+### Exception Handler (ID: b8af0d7b-da37-4e2a-ab0e-3ee963c0004b)
 
 **Purpose:** Manages and notifies of any errors occurring in the main flow.
 
