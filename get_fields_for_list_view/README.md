@@ -12,7 +12,7 @@ See here:
 
 ### Prequisitions:
 Create a manual trigger (e.g. Power Apps V2) and create an input of the type Text with the name "SharePoint_Site" in this trigger and another one "SharePoint_ViewFieldsURI". The first one contains the URL for the specific SharePoint Website.
-The Latter is the specific endpoint for the fields within this view. See this cloud flow on how to retrieve ViewFieldsURI: https://github.com/einfachKim/powerplatformhacks/tree/main/get_all_list_views#:~:text=Title%2C%20DefaultView%2C%20and-,ViewFieldsUri,-.
+The Latter is the specific endpoint for the fields within this view. See this cloud flow on how to retrieve ViewFieldsURI: https://github.com/einfachKim/powerplatformhacks/blob/main/get_all_list_views/README.md#:~:text=Select%3A%20Filters,the%20key%20%22ViewFieldsUri%22.
 See also here: https://i.imgur.com/FmSXPsG.png
 
 <img src="https://i.imgur.com/MOnWHI0.png"/>
