@@ -25,7 +25,9 @@ Create a manual trigger (e.g. Power Apps V2) and create an input of the type Tex
 
 **Actions:**
 1. **Send HTTP Request to SharePoint | Get All Views:** Fetches all views from the given SharePoint list.
-2. **Select:** Filters the retrieved views data to extract necessary details including ID, Title, DefaultView, and ViewFieldsUri.
+2. **Select:** Filters the retrieved views data to extract necessary details including ID, Title, DefaultView, and ViewFieldsUri. ViewFieldsUri is an Uri with which we can (e.g. with another flow) retrieve the fields within the view. See here: https://i.imgur.com/FmSXPsG.png. The complete URI looks like this: "https://mysharepoint.sharepoint.com/sites/Archiv/_api/Web/Lists(guid'b7239648-e499-42c1-b0bb-73376deeecad')/Views(guid'24ceb24c-4e63-4074-b2ea-2ea8f272df87')/ViewFields". Opening such an URL shows all the fields in XML format. The expression is used to cut out  "/Web/Lists(guid'b7239648-e499-42c1-b0bb-73376deeecad')/Views(guid'24ceb24c-4e63-4074-b2ea-2ea8f272df87')/ViewFields" and save it in the key "ViewFieldsUri".
+
+
 3. **Respond to PowerApp or Flow:** Sends the curated list of views and a success status back to the calling PowerApp or Flow.
 
 ### Exception Handler (ID: b8af0d7b-da37-4e2a-ab0e-3ee963c0004b)
