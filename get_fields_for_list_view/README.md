@@ -1,3 +1,21 @@
+### Power Automate Cloud Flow Documentation
+
+### How to use?
+Copy the json payload in the file "flow.json" for each Main Flow and Exception Handler and insert it via STRG+V into your flow. Adjust all missing connections.
+<img src="https://i.imgur.com/M8WPxHo.gif"/>
+
+### Important note
+Be sure that you configure the Exception Handler Scope to "run only" after the main scope has failed. Otherwise the exception handler will run all the time, which is not intended.
+See here:
+
+<img src="https://i.imgur.com/eE8yKKi.png"/>
+
+### Prequisitions:
+Create a manual trigger (e.g. Power Apps V2) and create an input of the type Text with the name "SharePoint_Site" in this trigger and another one "SharePoint_ViewFieldsURI". The first one contains the URL for the specific SharePoint Website.
+The Latter is the specific endpoint for the fields within this view. See this cloud flow on how to retrieve ViewFieldsURI: https://github.com/einfachKim/powerplatformhacks/tree/main/get_all_list_views#:~:text=Title%2C%20DefaultView%2C%20and-,ViewFieldsUri,-.
+See also here: https://i.imgur.com/FmSXPsG.png
+
+<img src="https://i.imgur.com/MOnWHI0.png"/>
 
 
 ### Main Flow (ID: 068929a8-31d4-470f-96d8-27035c54c7c4)
