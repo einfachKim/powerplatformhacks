@@ -1,7 +1,7 @@
 ## Power Automate Cloud Flow Documentation
 
 ## How to use?
-Copy the json payload for Main Flow and Exception Handler and insert it via STRG+V into your flow. Adjust all missing connections and choose your SharePoint List and Planner
+Copy the json payload in the file "flow.json" for each Main Flow and Exception Handler and insert it via STRG+V into your flow. Adjust all missing connections and choose your SharePoint List and Planner
 
 <img src="https://i.imgur.com/aTiIdZO.gif"/>
 
