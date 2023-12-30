@@ -10,7 +10,6 @@ See here:
 
 <img src="https://i.imgur.com/eE8yKKi.png"/>
 
-
 ### Prequisitions:
 Create a manual trigger (e.g. Power Apps V2) and create an input of the type Text with the name "SharePoint_Site" in this trigger and another one "SharePoint_List" and "SharePoint_List_View". In SharePoint_Site you will later transfer the URl for the specific SharePoint site on which the lists are to be looked up. In "SharePoint_List" you insert the Id of the specific List you want to retrieve views from. To retrieve SharePoint List Ids via Power Automate see this cloud flow: https://github.com/einfachKim/powerplatformhacks/tree/main/get_all_sharepoint_lists. In "SharePoint_List_View" you need to insert the Id of the specific view you want to modifiy. To retrieve SharePoint List View Ids via Power Automate see this cloud flow: https://github.com/einfachKim/powerplatformhacks/tree/main/get_all_list_views
 
