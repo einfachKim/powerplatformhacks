@@ -9,6 +9,7 @@ Copy the json payload in the file "flow.json" for each Main Flow and Exception H
 ### Important note
 Be sure that you configure the Exception Handler Scope to "run only" after the main scope has failed. Otherwise the exception handler will run all the time, which is not intended.
 See here:
+
 <img src="https://i.imgur.com/eE8yKKi.png"/>
 
 
