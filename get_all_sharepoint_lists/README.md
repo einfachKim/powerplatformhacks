@@ -1,7 +1,12 @@
 ## Power Automate Cloud Flow Documentation
 
 ### How to use?
+Copy the json payload in the file "flow.json" for each Main Flow and Exception Handler and insert it via STRG+V into your flow. Adjust all missing connections and choose your SharePoint List and Planner
 
+### Prequisitions:
+Create a manual trigger (e.g. Power Apps V2) and create an input of the type Text with the name "SharePointSite" in this trigger. In this you will later transfer the URl for the specific SharePoint site on which the lists are to be looked up.
+
+https://i.imgur.com/2gWdfVs.png
 
 ### Main Flow (`2f95a401-ecdb-45c0-8dae-cc5fef6fe10b`)
 - **Purpose**: Retrieves all visible SharePoint lists from a specified site.
