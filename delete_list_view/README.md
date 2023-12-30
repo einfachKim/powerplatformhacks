@@ -19,7 +19,7 @@ Create a manual trigger (e.g. Power Apps V2) and create an input of the type Tex
 **Purpose:** Deletes a specific view from a SharePoint list.
 
 **Actions:**
-1. **Send HTTP Request to SharePoint:** Performs a DELETE operation targeting a specific SharePoint list view.
+1. **Send HTTP Request to SharePoint:** Performs a DELETE operation targeting a specific SharePoint list view. https://i.imgur.com/BepmNW2.png
 2. **Respond to PowerApp or Flow:** Confirms successful deletion by returning a status message.
 
 ### Exception Handler (ID: 52ed02e0-0c5b-4452-8827-61e0e6d5b992)
