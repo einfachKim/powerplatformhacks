@@ -1,5 +1,11 @@
 ## Power Automate Cloud Flow Documentation
 
+## How to use?
+Copy the json payload for Main Flow and Exception Handler and insert it via STRG+V into your flow. Adjust all missing connections and choose your SharePoint List and Planner
+
+<img src="https://i.imgur.com/hJuY0kZ.gif"/>
+
+
 ### Main Flow
 - **Purpose**: Retrieve all SharePoint sites using the Graph API.
 - **Actions**:
