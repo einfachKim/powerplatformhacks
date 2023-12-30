@@ -6,6 +6,12 @@
 Copy the json payload in the file "flow.json" for each Main Flow and Exception Handler and insert it via STRG+V into your flow. Adjust all missing connections.
 <img src="https://i.imgur.com/OAp9qCC.gif"/>
 
+### Important note
+Be sure that you configure the Exception Handler Scope to "run only" after the main scope has failed. Otherwise the exception handler will run all the time, which is not intended.
+See here:
+<img src="https://i.imgur.com/eE8yKKi.png"/>
+
+
 ### Prequisitions:
 Create a manual trigger (e.g. Power Apps V2) and create an input of the type Text with the name "SharePoint_Site" in this trigger and another one "SharePoint_List". In SharePoint_Site you will later transfer the URl for the specific SharePoint site on which the lists are to be looked up. In "SharePoint_List" you insert the Id of the specific List you want to retrieve views from.
 <img src="https://i.imgur.com/jrwO7NT.png"/>
