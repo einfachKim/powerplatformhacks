@@ -5,5 +5,8 @@ Mit diesem Power Automate Flow können verschiedenste Formate an .csv-Dateien in
 
 ## Videoanleitung - How to use:
 
-<img src="https://i.imgur.com/hJuY0kZ.gif"/>
+
+
+## Wichtige Anpassungen:
+<img src="https://i.imgur.com/grvArFd.png"/>
 
