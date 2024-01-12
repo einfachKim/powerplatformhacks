@@ -1,0 +1,66 @@
+/**
+ * Convert incoming CSV data into a range and add it to the workbook.
+ */
+function main(workbook: ExcelScript.Workbook, csv: string) {
+  //let sheet = workbook.getWorksheet("Sheet1");
+  let sheet = workbook.getActiveWorksheet();
+
+  // Clear ExcelScript.ClearApplyTo.contents from all cells on selectedSheet
+  //sheet.getRange().clear(ExcelScript.ClearApplyTo.contents);
+
+  // Remove any Windows \r characters.
+  csv = csv.replace(/\r/g, "");
+
+  // Split each line into a row.
+  let rows = csv.split("\n");
+  /*
+   * For each row, match the comma-separated sections.
+   * For more information on how to use regular expressions to parse CSV files,
+   * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
+   */
+  const csvMatchRegex = /(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g
+  let rowCount = 0;
+  rows.forEach((value, index) => {
+    if (value.length > 0) {
+      let row = value.match(csvMatchRegex);
+
+      // Check for blanks at the start of the row.
+      if (row[0].charAt(0) === ',') {
+        row.unshift("");
+      }
+
+      // Remove the preceding comma.
+      row.forEach((cell, index) => {
+        row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
+      });
+
+      // Create a 2D array with one row.
+      let data: string[][] = [];
+      data.push(row);
+
+      // Put the data in the worksheet.
+      let range = sheet.getRangeByIndexes(index, 0, 1, data[0].length);
+      range.setValues(data);
+      rowCount++;
+      if (rowCount % 5000 === 0) {
+        console.log("Syncing 5000 rows.");
+      }
+    }
+  });
+
+  // Get the used range of the worksheet, starting from A1
+  let usedRange = sheet.getUsedRange();
+
+  // Check if the used range is non-null and has more than 0 rows and columns
+  if (usedRange && usedRange.getRowCount() > 0 && usedRange.getColumnCount() > 0) {
+    // Create a new table with the used range
+    let newTable = workbook.addTable(usedRange, true);
+
+    // Apply a predefined style to the new table
+    newTable.setPredefinedTableStyle("TableStyleLight1");
+  } else {
+    // Handle the case where there are no non-empty cells (optional)
+    console.log("No data found to create a table.");
+  }
+
+}
