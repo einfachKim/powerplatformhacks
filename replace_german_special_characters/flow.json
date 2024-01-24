@@ -1,0 +1,65 @@
+{
+   "id":"d40e7396-e7a7-406b-bf5f-e28889022998",
+   "brandColor":"#8C3900",
+   "connectionReferences":{
+      
+   },
+   "connectorDisplayName":"Control",
+   "icon":"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KIDxwYXRoIGQ9Im0wIDBoMzJ2MzJoLTMyeiIgZmlsbD0iIzhDMzkwMCIvPg0KIDxwYXRoIGQ9Im04IDEwaDE2djEyaC0xNnptMTUgMTF2LTEwaC0xNHYxMHptLTItOHY2aC0xMHYtNnptLTEgNXYtNGgtOHY0eiIgZmlsbD0iI2ZmZiIvPg0KPC9zdmc+DQo=",
+   "isTrigger":false,
+   "operationName":"Scope",
+   "operationDefinition":{
+      "type":"Scope",
+      "actions":{
+         "Compose_|_Text_with_special_characters":{
+            "type":"Compose",
+            "inputs":"Über den grünen Hügel, wo die Vögel singen, liegt ein gemütliches Café. Dort genieße ich einen köstlichen Kaffee mit süßen Brötchen. Das Wetter ist fantastisch, die Sonne scheint, und ich entspanne mich unter einem schattigen Baum. Ein perfekter Tag mit überraschenden Momenten!",
+            "runAfter":{
+               
+            }
+         },
+         "Compose_|_Replacement_matrix":{
+            "type":"Compose",
+            "inputs":{
+               "ä":"ae",
+               "Ä":"Ae",
+               "ü":"ue",
+               "Ü":"Ue",
+               "ö":"oe",
+               "Ö":"Oe",
+               "ß":"ss"
+            },
+            "runAfter":{
+               "Compose_|_Text_with_special_characters":[
+                  "Succeeded"
+               ]
+            },
+            "description":"See here: https://poszytek.eu/en/microsoft-en/office-365-en/powerautomate-en/replace-special-characters-using-power-automate/"
+         },
+         "Select_|_Replace_characters":{
+            "type":"Select",
+            "inputs":{
+               "from":"@range(0, length(outputs('Compose_|_Text_with_special_characters')))",
+               "select":"@if(not(empty(outputs('Compose_|_Replacement_matrix')?[substring(outputs('Compose_|_Text_with_special_characters'), item(), 1)])), outputs('Compose_|_Replacement_matrix')[substring(outputs('Compose_|_Text_with_special_characters'), item(), 1)], substring(outputs('Compose_|_Text_with_special_characters'), item(), 1)) "
+            },
+            "runAfter":{
+               "Compose_|_Replacement_matrix":[
+                  "Succeeded"
+               ]
+            }
+         },
+         "Compose":{
+            "type":"Compose",
+            "inputs":"@join(body('Select_|_Replace_characters'), '')",
+            "runAfter":{
+               "Select_|_Replace_characters":[
+                  "Succeeded"
+               ]
+            }
+         }
+      },
+      "runAfter":{
+         
+      }
+   }
+}
